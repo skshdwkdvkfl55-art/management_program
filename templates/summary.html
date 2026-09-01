@@ -118,7 +118,7 @@
                     </td>
                     <td style="text-align: right; padding-right: 20px; color: #689f38; font-weight: bold;">
                         {% if total > 0 %}
-                            {{ "%.1f"|format((amount / total) * 100) }}%
+                            {{ ((amount / total) * 100) | round(1) }}%
                         {% else %}
                             0%
                         {% endif %}
@@ -128,4 +128,10 @@
             </tbody>
         </table>
         {% else %}
-        <p style="color: #8
+        <p style="color: #8d6e63; text-align: center; padding: 25px 0;">아직 집계할 지출 내역이 없어요구리!</p>
+        {% endif %}
+
+        <a href="/" class="btn-home">🏡 마을(홈)으로 돌아가기</a>
+    </div>
+</body>
+</html>
